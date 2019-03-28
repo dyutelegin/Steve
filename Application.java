@@ -1,5 +1,9 @@
 package com.javacore.epam;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Application {
     static final String APP_NAME = "Steve";
     static String author = "Telegin Dmitrii";
