@@ -3,6 +3,8 @@ package com.javacore.epam;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Application {
     static final String APP_NAME = "Steve";
@@ -18,6 +20,10 @@ public class Application {
                 }
                 if (command.equals("author") || command.equals("creator") || command.equals("father")) {
                     System.out.println("My author's name is " + author);
+                }
+                if (command.equals("Time")){
+                    SimpleDateFormat simpleDate = new SimpleDateFormat("kk:mm:ss a");
+                    System.out.println(simpleDate.format(new Date()).toString());
                 }
                 if (command.matches("[A-Z?]")){
                     System.out.println("I don't understand you, sorry");
