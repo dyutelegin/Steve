@@ -15,13 +15,14 @@ public class Application {
         while (true) {
             String command = reader.readLine();
             if (!command.isEmpty()) {
-                if (command.equals("version")) {
+                if (command.equals(args[0])) {
                     System.out.println("My version name is " + version);
                 }
-                if (command.equals("author") || command.equals("creator") || command.equals("father")) {
+                if (command.equals(args[1]) || command.equals(args[2]) || command.equals(args[3])) {
                     System.out.println("My author's name is " + author);
                 }
-                if (command.equals("Time")){
+                // if (command.equals(args[4]))
+                if (command.equals(args[5])){
                     SimpleDateFormat simpleDate = new SimpleDateFormat("kk:mm:ss a");
                     System.out.println(simpleDate.format(new Date()).toString());
                 }
