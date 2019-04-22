@@ -6,8 +6,6 @@ import com.javacore.epam.command.CommandRegistry;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Application {
     static public final String APP_NAME = "Steve";
@@ -17,17 +15,15 @@ public class Application {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         while (true){
             String commandName = reader.readLine();
+            ACommand command = CommandRegistry.INSTANCE.getCommand(commandName);
             if (!commandName.isEmpty()) {
-                if(commandName.equals(args[0])){
-                    ACommand command = CommandRegistry.INSTANCE.getCommand(commandName);
+                if(commandName.equals(args[0])){                 
                     command.execute();
                 }
-                if (commandName.equals(args[1]) || commandName.equals(args[2]) || commandName.equals(args[3])) {
-                    ACommand command = CommandRegistry.INSTANCE.getCommand(commandName);
+                if (commandName.equals(args[1]) || commandName.equals(args[2]) || commandName.equals(args[3])) {                
                     command.execute();
                 }
-                if (commandName.equals(args[5])) {
-                    ACommand command = CommandRegistry.INSTANCE.getCommand(commandName);
+                if (commandName.equals(args[5])) {                
                     command.execute();
                 }
             }
